@@ -115,3 +115,21 @@ detached mode
    `docker run -it -p 3000:3000 -e PORT=3000 -e DB=localhost <name>`
    `docker run -it -p 3000:3000 --envfile=./.env <name>`
 
+# Docker-Networking
+  `docker network create nasnet`
+  `docker run -itd --network nasnet --rm --name con1 ubuntu`
+  `docker run -itd --network nasnet --rm --name con2 ubuntu`
+  `docker run -itd --network nasnet --rm --name con3 ubuntu`
+
+# Docker volume
+  `docker run -it -v <host/vol>:<container> --rm ubuntu`
+
+   `docker volume create custom_data`
+  `docker run -it -v custom_data:<container> --rm ubuntu`
+
+# Docker Compose
+  step 1: Create a docker compose file it has to be yml file
+  step 2: For running docker compose command `docker compose up` 
+  or `docker compose up -d` 
+  for down run `docker compose down`
+
